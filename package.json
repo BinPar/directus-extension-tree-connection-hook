@@ -2,7 +2,7 @@
 	"name": "@binpar/directus-extension-dynamic-trees",
 	"description": "Updates checkbox trees based on the content of dynamicTrees collection",
 	"icon": "extension",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"keywords": [
 		"directus",
 		"directus-extension",
@@ -15,7 +15,9 @@
 		"host": "^9.22.4",
 		"hidden": false
 	},
-	"files": ["dist"],
+	"files": [
+		"dist"
+	],
 	"scripts": {
 		"build": "directus-extension build",
 		"build:dev": "directus-extension build --watch",
