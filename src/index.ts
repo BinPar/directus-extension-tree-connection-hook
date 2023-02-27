@@ -5,8 +5,6 @@ import recalculateTreeForTable from './recalculateTreeForTable';
 import setupInitialActions from './setupInitialActions';
 import { TreeConnectionRecord } from './types';
 
-// Comenté expecíficamente en la reunión que tenía que tener una por defecto
-// pero configurable por variable de entorno
 export const mainTreeConnectionTable = process.env.TREE_CONNECTION_TABLE || 'treeConnections';
 
 export const configRecordsByID = new Map<string, TreeConnectionRecord>();

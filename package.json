@@ -10,12 +10,17 @@
 	],
 	"directus:extension": {
 		"type": "hook",
-		"path": "../../../extensions/hooks/dynamicTrees/index.js",
+		"path": "dist/index.js",
 		"source": "src/index.ts",
-		"host": "^9.22.4"
+		"host": "^9.22.4",
+		"hidden": false
 	},
+	"files": ["dist"],
 	"scripts": {
-		"build": "directus-extension build --watch"
+		"build": "directus-extension build",
+		"build:dev": "directus-extension build --watch",
+		"version": "npm run build && git add -A dist",
+		"postversion": "git push && git push --tags && rm -rf build/temp"
 	},
 	"devDependencies": {
 		"@directus/extensions-sdk": "9.22.4",
