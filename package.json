@@ -1,5 +1,5 @@
 {
-	"name": "directus-extension-dynamic-trees",
+	"name": "@binpar/directus-extension-dynamic-trees",
 	"description": "Updates checkbox trees based on the content of dynamicTrees collection",
 	"icon": "extension",
 	"version": "1.0.0",
