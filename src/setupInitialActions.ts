@@ -2,11 +2,15 @@ import { ActionHandler } from '@directus/shared/dist/esm/types/events';
 import { addRecordHandlers, mainTreeConnectionTable } from '.';
 import { TreeConnectionRecord } from './types';
 import { Knex } from 'knex';
+import { createTableIfNotExists } from './createTableIfNotExists';
 export let database: Knex<any, any[]>;
 
-// Es mejor usar los tipos... aunque sea dificl
+
 const setupInitialActions: ActionHandler = async (_, context) => {
   database = context.database;
+
+  await createTableIfNotExists(mainTreeConnectionTable);
+
   const mainTreeConnectionTableRecords = await database<TreeConnectionRecord>(
     mainTreeConnectionTable,
   )
