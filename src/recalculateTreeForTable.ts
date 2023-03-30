@@ -11,7 +11,7 @@ const recalculateTreeForTable = async (originTable: string): Promise<void> => {
       let display: TreeChoice[] | undefined = undefined;
       if (value.originTable === originTable && value.status === 'published') {
         if (!choices) {
-          const dbTablesToGetStructure = await database<DBTreeBranch>(originTable).select('*'); // This crashes when originTable does not exist
+          const dbTablesToGetStructure = await database<DBTreeBranch>(originTable).select('*');
           choices = buildTree(dbTablesToGetStructure, null, value);
           display = buildChoices(dbTablesToGetStructure, value);
         }

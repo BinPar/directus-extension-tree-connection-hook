@@ -10,7 +10,7 @@
 	],
 	"directus:extension": {
 		"type": "hook",
-		"path": "../../../extensions/hooks/directus-extension-dynamic-trees/index.js",
+		"path": "../read.garden-directus/extensions/hooks/directus-extension-dynamic-trees/index.js",
 		"source": "src/index.ts",
 		"host": "^9.22.4",
 		"hidden": false
