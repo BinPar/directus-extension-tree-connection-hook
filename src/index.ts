@@ -41,6 +41,7 @@ const myHook = defineHook(({ action }) => {
       const current = configRecordsByID.get(key);
       if (current) {
         Object.assign(current, payload);
+        recalculateTreeForTable(current.originTable);
       }
     });
   });
